@@ -9,6 +9,7 @@ const comments = require('./routes/comments');
 const products = require('./routes/products');
 
 app.use(express.static('public'));
+app.use(bodyParser.urlencoded({ extended:false}));
 app.use(bodyParser.json());
 app.use(contacts);
 app.use(vehicles);
